@@ -5,18 +5,16 @@
  */
 package com.computingstudios.messagingservice;
 
-import java.net.InetAddress;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.FactoryBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  *
  * @author svallath
  */
-@Component
-@Scope("prototype")
-public class UserConnection {
-    InetAddress ip;
-    int port;
+@Configuration
+public class MessagingProperties {
     
+
 }

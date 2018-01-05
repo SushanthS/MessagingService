@@ -5,19 +5,24 @@
  */
 package com.computingstudios.messagingservice;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author svallath
  */
+@Component
+@Scope("prototype")
 public class User {
 
-    private final long id;
-    private final String name;
+    private long id;
+    private String name;
 
-    public User(long id, String content) {
-        this.id = id;
-        this.name = content;
-    }
+//    public User(long id, String content) {
+//        this.id = id;
+//        this.name = content;
+//    }
 
     public long getId() {
         return id;
@@ -26,4 +31,13 @@ public class User {
     public String getName() {
         return name;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }

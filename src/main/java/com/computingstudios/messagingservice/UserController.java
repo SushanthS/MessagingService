@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
+//    private static final String template = "Hello, %s!";
+//    private final AtomicLong counter = new AtomicLong();
     @Autowired
     private UserList userList;
 
     @RequestMapping("/users")
-    public User greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return new User(userList.getUserList().size(), userList.getUserList().toString());
+    public UserList users(@RequestParam(value = "name", defaultValue = "World") String name) {
+        return userList;
     }
 }
